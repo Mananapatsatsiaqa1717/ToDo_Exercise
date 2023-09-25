@@ -1,39 +1,56 @@
-# React Todo App.
----
-## Project Description
+# Cypress Automation Framework for Todo_app
 
-This is a Complete Todo Application with all features with CRUD operations. We are using `React.js` and to manage our states, we are using `Redux`. 
-## Getting Started
+This Cypress automation framework is designed to automate the testing of the Todo_app web application based on the provided User Stories. 
+It includes test scenarios and scripts to ensure the application's functionality is thoroughly validated. 
 
-You need to go the file directory using terminal and run
+## Prerequisites
+
+Before running the automated tests, make sure you have the following prerequisites installed on your system:
+
+- [Node.js](https://nodejs.org/)
+- [Cypress](https://www.cypress.io/)
+
+## Installation
+
+1. Clone/Download this repository to your local machine:
+
+   ```bash
+   git clone https://github.com/your-username/cypress-todo-app-automation.git
+Navigate to the project directory:
 
 ```shell
-cd react-todo-app
+cd ToDo_QA_Cypress_Exercise
 npm install
 ```
+You can execute the test suite using Cypress in headless mode or by opening the Cypress Test Runner.
 
-and after that start the dev server.
+## Headless Mode
+To run the tests in headless mode (without a graphical interface), use the following command:
 
 ```shell
-npm start
+npx cypress run --spec cypress\e2e\2-advanced-examples\todo.cy.js
 ```
-and open `http://localhost:3000` in your broweser to view the app.
+## Report
+To view generated HTML report, copy the `reports\html` path and paste to web browser.
+ 
+## The following User Stories and scenarios are covered by this automation framework:
 
-<br>
-##### Common issues while instaling packages:
-You may face below error:
-```
-npm ERR! code ERR_SOCKET_TIMEOUT
-npm ERR! network Socket timeout
-npm ERR! network This is a problem related to network connectivity.
-npm ERR! network In most cases you are behind a proxy or have bad network settings.
-npm ERR! network
-npm ERR! network If you are behind a proxy, please make sure that the
-npm ERR! network 'proxy' config is set properly.  See: 'npm help config
-```
+### Feature: First time user
 
-Sometimes npm fails to fetch some module due to internet connection problems. You can try using different internet connection or increasing npm fetch timeouts using below commands:
-```
-npm config set fetch-retry-mintimeout 20000
-npm config set fetch-retry-maxtimeout 120000
-```
+Verify that no ToDos are displayed for first-time users.
+Feature: Create a ToDo task
+
+Verify the ability to open the Add ToDo dialog box.
+Verify the ability to create a new ToDo task.
+Feature: Update a ToDo task
+
+Verify the ability to open the Update ToDo dialog box.
+Verify the ability to update an existing ToDo task.
+Feature: Delete a ToDo task
+
+Verify the ability to delete a ToDo task.
+
+Detailed test cases and implementation can be found in the individual test files within the cypress\e2e\2-advanced-examples directory.     
+
+Contributing
+Contributions to this automation framework are welcome. If you find issues or want to enhance the test coverage, feel free to open issues, submit pull requests, or provide feedback.
